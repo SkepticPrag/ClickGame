@@ -1,4 +1,6 @@
 using System.Collections.Generic;
+using Interfaces;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class ObjectPooler : MonoBehaviour
@@ -9,14 +11,14 @@ public class ObjectPooler : MonoBehaviour
     public class Pool
     {
         public string tag;
-        public GameObject scriptableItem;
+        public ScriptableItem scriptableItem;
         public int size;
     }
 
     public List<Pool> pools;
-    public Dictionary<string, Queue<GameObject>> poolDictionary;
+    private Dictionary<string, Queue<GameObject>> _poolDictionary;
 
-    
+
     private void Awake()
     {
         if (Instance == null)
@@ -28,10 +30,10 @@ public class ObjectPooler : MonoBehaviour
             Destroy(gameObject);
         }
     }
-    
+
     private void Start()
     {
-        poolDictionary = new Dictionary<string, Queue<GameObject>>();
+        _poolDictionary = new Dictionary<string, Queue<GameObject>>();
 
         foreach (Pool pool in pools)
         {
@@ -39,31 +41,40 @@ public class ObjectPooler : MonoBehaviour
 
             for (int i = 0; i < pool.size; i++)
             {
-                GameObject obj = Instantiate(pool.scriptableItem);
-                obj.SetActive(true);
+                GameObject obj = Instantiate(pool.scriptableItem.itemPrefab);
+
+                IItem objectItem = obj.GetComponent<Item>();
+                if (objectItem != null)
+                {
+                    objectItem.ItemAddScore = pool.scriptableItem.clickedScore;
+                    objectItem.ItemPointLoss = pool.scriptableItem.pointLoss;
+                    objectItem.ItemLifeSpan = pool.scriptableItem.lifeSpan;
+                }
+
                 objectPool.Enqueue(obj);
+                obj.SetActive(false);
             }
 
-            poolDictionary.Add(pool.tag, objectPool);
+            _poolDictionary.Add(pool.tag, objectPool);
         }
     }
 
 
     public GameObject SpawnFromPool(string tag, Vector3 position, Quaternion rotation)
     {
-        if (!poolDictionary.ContainsKey(tag))
+        if (!_poolDictionary.ContainsKey(tag))
         {
             Debug.LogWarning("Pool with tag " + tag + " does not exist.");
             return null;
         }
 
-        GameObject objectToSpawn = poolDictionary[tag].Dequeue();
+        GameObject objectToSpawn = _poolDictionary[tag].Dequeue();
 
-        objectToSpawn.SetActive(true);
-        objectToSpawn.transform.position = position;
-        objectToSpawn.transform.rotation = rotation;
+        IItem objectItem = objectToSpawn.GetComponent<Item>();
 
-        poolDictionary[tag].Enqueue(objectToSpawn);
+        objectItem?.OnItemSpawn(true, position, rotation);
+
+        _poolDictionary[tag].Enqueue(objectToSpawn);
 
         return objectToSpawn;
     }

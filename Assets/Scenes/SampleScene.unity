@@ -527,7 +527,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pools:
   - tag: Coin
-    scriptableItem: {fileID: 3815842975810647286, guid: 1a2d8c612e075d14a911ff8bd1a8201e, type: 3}
+    scriptableItem: {fileID: 11400000, guid: 27b2948b757f0b645ab14781e45c485d, type: 2}
     size: 5
 --- !u!4 &2064790687
 Transform:
