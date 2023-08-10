@@ -1,23 +1,30 @@
+using System.Collections;
+using Interfaces;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
 public class Item : MonoBehaviour, IItem
 {
-    public ScriptableItem item;
-    private GameObject _prefabToSpawn;
+    [SerializeField] ScriptableItem scriptableItemInstance;
+    private Coroutine _coroutine;
 
-    public void SpawnItem()
+    private void OnEnable()
     {
-        _prefabToSpawn = Instantiate(item.itemPrefab, transform.position, Quaternion.identity);
+        _coroutine = StartCoroutine(DespawnItem());
+    }
+    private void OnDisable()
+    {
+        if (_coroutine != null)
+            StopCoroutine(_coroutine);
     }
 
-    public void DespawnItem()
+    public IEnumerator DespawnItem()
     {
-        Destroy(this.gameObject);
+        yield return new WaitForSeconds(scriptableItemInstance.lifeSpan);
+        gameObject.SetActive(false);
     }
-
     public void OnPointerClick(PointerEventData eventData)
     {
-        Debug.Log("HolaMundo");
+        Debug.Log("Hello World");
     }
 }
