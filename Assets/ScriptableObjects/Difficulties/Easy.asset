@@ -20,3 +20,4 @@ MonoBehaviour:
   maximumTimeBetweenSpawns: 0
   minimumObjectsAtTheSameTime: 0
   maximumObjectsAtTheSameTime: 0
+  totalChanceOfAllItems: 5

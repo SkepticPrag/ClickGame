@@ -10,10 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1a10af2d21fee94439c45220d5ac6f44, type: 3}
-  m_Name: Shield
+  m_Name: Coin
   m_EditorClassIdentifier: 
-  itemName: 
-  itemPrefab: {fileID: 0}
+  itemName: Coin
+  itemPrefab: {fileID: 3815842975810647286, guid: 1a2d8c612e075d14a911ff8bd1a8201e, type: 3}
   lifeSpan: 5
-  clickedScore: 0
-  pointLoss: 0
+  clicksNeeded: 1
+  clickedScore: 5
+  pointLoss: 1

@@ -9,11 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1a10af2d21fee94439c45220d5ac6f44, type: 3}
-  m_Name: Coin
+  m_Script: {fileID: 11500000, guid: 6b1da344bb8fb9e44aaa927939a6fa95, type: 3}
+  m_Name: Medium
   m_EditorClassIdentifier: 
-  itemName: Coin
-  itemPrefab: {fileID: 3815842975810647286, guid: 1a2d8c612e075d14a911ff8bd1a8201e, type: 3}
-  lifeSpan: 5
-  clickedScore: 5
-  pointLoss: 1
+  itemChances: []
+  minimumTimeBetweenSpawns: 0
+  maximumTimeBetweenSpawns: 0
+  minimumObjectsAtTheSameTime: 0
+  maximumObjectsAtTheSameTime: 0
+  totalChanceOfAllItems: 0

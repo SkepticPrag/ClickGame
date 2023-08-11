@@ -529,6 +529,9 @@ MonoBehaviour:
   - tag: Coin
     scriptableItem: {fileID: 11400000, guid: 27b2948b757f0b645ab14781e45c485d, type: 2}
     size: 5
+  - tag: Shield
+    scriptableItem: {fileID: 11400000, guid: 9185b8fe23d5ca54d9e2be546b8dfb75, type: 2}
+    size: 5
 --- !u!4 &2064790687
 Transform:
   m_ObjectHideFlags: 0
