@@ -20,8 +20,8 @@ public class ScriptableDifficulties : ScriptableObject
     public int minimumTimeBetweenSpawns;
     public int maximumTimeBetweenSpawns;
 
-    public int minimumObjectsAtTheSameTime;
-    public int maximumObjectsAtTheSameTime;
+    // public int minimumObjectsAtTheSameTime;
+    // public int maximumObjectsAtTheSameTime;
     
     [Space]
     public int totalChanceOfAllItems;

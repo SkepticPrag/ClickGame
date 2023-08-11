@@ -10,7 +10,7 @@ public class GameManager : MonoBehaviour
 
     public static GameManager Instance;
 
-    public int finalScore;
+    private int _finalScore;
     [SerializeField] private GameObject difficultyPanel;
     [SerializeField] private GameObject scorePanel;
     [SerializeField] private GameObject timerPanel;
@@ -55,8 +55,8 @@ public class GameManager : MonoBehaviour
         scorePanel.SetActive(true);
         timerPanel.SetActive(true);
 
-        finalScore = 0;
-        scoreText.text = "Score: " + finalScore.ToString();
+        _finalScore = 0;
+        scoreText.text = "Score: " + _finalScore.ToString();
 
         for (int i = 0; i < ScriptableDifficultiesGm.itemChances.Count; i++)
         {
@@ -74,10 +74,10 @@ public class GameManager : MonoBehaviour
 
     public void ChangeScore(int amount)
     {
-        finalScore += amount;
-        scoreText.text = "Score: " + finalScore.ToString();
+        _finalScore += amount;
+        scoreText.text = "Score: " + _finalScore.ToString();
 
-        if (finalScore >= 100)
+        if (_finalScore >= 100)
             WinState();
     }
 

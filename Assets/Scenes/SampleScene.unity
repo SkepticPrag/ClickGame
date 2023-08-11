@@ -608,7 +608,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -741,7 +741,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 100cf2ce41a961841b56ba49e8977b9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  finalScore: 0
   difficultyPanel: {fileID: 878091442}
   scorePanel: {fileID: 2063005409}
   timerPanel: {fileID: 742339526}
@@ -807,7 +806,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
