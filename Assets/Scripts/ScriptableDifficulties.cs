@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -9,6 +10,7 @@ public class ScriptableDifficulties : ScriptableObject
     {
         public string tag;
         public ScriptableItem scriptableItem;
+        [Range(0,100)]
         public int spawnChance;
     }
 
@@ -19,4 +21,7 @@ public class ScriptableDifficulties : ScriptableObject
 
     public int minimumObjectsAtTheSameTime;
     public int maximumObjectsAtTheSameTime;
+    
+    [Space]
+    public int totalChanceOfAllItems;
 }

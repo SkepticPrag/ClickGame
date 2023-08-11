@@ -5,27 +5,10 @@ using UnityEngine.EventSystems;
 
 public class Item : MonoBehaviour, IItem
 {
-    private int _itemAddScore;
-    private int _itemPointLoss;
-    private int _itemLifeSpan;
-
-    public int ItemAddScore
-    {
-        get => _itemAddScore;
-        set => _itemAddScore = value;
-    }
-
-    public int ItemPointLoss
-    {
-        get => _itemPointLoss;
-        set => _itemPointLoss = value;
-    }
-
-    public int ItemLifeSpan
-    {
-        get => _itemLifeSpan;
-        set => _itemLifeSpan = value;
-    }
+    public int ClicksNeeded { get; set; }
+    public int ItemAddScore { get; set; }
+    public int ItemPointLoss { get; set; }
+    public int ItemLifeSpan { get; set; }
 
     private Coroutine _coroutine;
 
@@ -46,13 +29,13 @@ public class Item : MonoBehaviour, IItem
 
     public IEnumerator DespawnItem()
     {
-        yield return new WaitForSeconds(_itemLifeSpan);
-        Debug.Log("Point loss: " + _itemPointLoss);
+        yield return new WaitForSeconds(ItemLifeSpan);
+        Debug.Log("Point loss: " + ItemPointLoss);
         gameObject.SetActive(false);
     }
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        Debug.Log("Added Score: " + _itemAddScore);
+        Debug.Log("Added Score: " + ItemAddScore);
     }
 }

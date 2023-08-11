@@ -46,6 +46,7 @@ public class ObjectPooler : MonoBehaviour
                 IItem objectItem = obj.GetComponent<Item>();
                 if (objectItem != null)
                 {
+                    objectItem.ClicksNeeded = pool.scriptableItem.clicksNeeded;
                     objectItem.ItemAddScore = pool.scriptableItem.clickedScore;
                     objectItem.ItemPointLoss = pool.scriptableItem.pointLoss;
                     objectItem.ItemLifeSpan = pool.scriptableItem.lifeSpan;

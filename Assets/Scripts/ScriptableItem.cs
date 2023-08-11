@@ -7,8 +7,8 @@ public class ScriptableItem : ScriptableObject
 
     public GameObject itemPrefab;
     public int lifeSpan = 5;
-    
+
+    public int clicksNeeded;
     public int clickedScore;
     public int pointLoss;
-    
 }
