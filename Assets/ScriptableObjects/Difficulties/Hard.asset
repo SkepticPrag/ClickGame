@@ -13,9 +13,27 @@ MonoBehaviour:
   m_Name: Hard
   m_EditorClassIdentifier: 
   difficulty: Hard
-  itemChances: []
-  minimumTimeBetweenSpawns: 0
-  maximumTimeBetweenSpawns: 0
+  itemChances:
+  - tag: Coin
+    scriptableItem: {fileID: 11400000, guid: 27b2948b757f0b645ab14781e45c485d, type: 2}
+    spawnChance: 15
+  - tag: BlueSphere
+    scriptableItem: {fileID: 11400000, guid: c938d0f75d243374eb460427afe196cb, type: 2}
+    spawnChance: 15
+  - tag: YellowBlock
+    scriptableItem: {fileID: 11400000, guid: 7a46b6a68fa692f47b66d82913acdfcc, type: 2}
+    spawnChance: 35
+  - tag: RedBox
+    scriptableItem: {fileID: 11400000, guid: 55c48defe8eeb7345b8baff04ffa15b1, type: 2}
+    spawnChance: 20
+  - tag: Shield
+    scriptableItem: {fileID: 11400000, guid: 9185b8fe23d5ca54d9e2be546b8dfb75, type: 2}
+    spawnChance: 10
+  - tag: Target
+    scriptableItem: {fileID: 11400000, guid: 021ababa2281474438171d40b9d07b8a, type: 2}
+    spawnChance: 5
+  minimumTimeBetweenSpawns: 1
+  maximumTimeBetweenSpawns: 2
   minimumObjectsAtTheSameTime: 0
   maximumObjectsAtTheSameTime: 0
-  totalChanceOfAllItems: 0
+  totalChanceOfAllItems: 100

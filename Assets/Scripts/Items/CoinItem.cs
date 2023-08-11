@@ -7,7 +7,9 @@ namespace Items
     {
         public override void OnPointerClick(PointerEventData eventData)
         {
+            GameManager.Instance.ChangeScore(ItemAddScore);
             Debug.Log("Coin Item Clicked.");
+            gameObject.SetActive(false);
         }
     }
 }

@@ -14,6 +14,7 @@ public class ObjectPooler : MonoBehaviour
         public int size;
     }
 
+    private List<GameObject> instantiatedItems;
     public List<Pool> pools;
     private Dictionary<string, Queue<GameObject>> _poolDictionary;
 
@@ -32,6 +33,7 @@ public class ObjectPooler : MonoBehaviour
 
     private void Start()
     {
+        instantiatedItems = new List<GameObject>();
         _poolDictionary = new Dictionary<string, Queue<GameObject>>();
 
         foreach (Pool pool in pools)
@@ -53,6 +55,7 @@ public class ObjectPooler : MonoBehaviour
 
                 objectPool.Enqueue(obj);
                 // objectItem?.OnItemSpawn(true, new Vector3(0, 0, 0), Quaternion.identity);
+                instantiatedItems.Add(obj);
                 obj.SetActive(false);
             }
 
@@ -78,5 +81,13 @@ public class ObjectPooler : MonoBehaviour
         _poolDictionary[tag].Enqueue(objectToSpawn);
 
         return objectToSpawn;
+    }
+
+    public void DespawnObjects()
+    {
+        foreach (var item in instantiatedItems)
+        {
+            item.SetActive(false);
+        }
     }
 }

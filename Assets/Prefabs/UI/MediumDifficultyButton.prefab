@@ -136,7 +136,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b960720bf78e64643a5e587ae2338700, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  difficulty: {fileID: 11400000, guid: 842c33126587c71419607b016d30e1da, type: 2}
+  difficulty: {fileID: 11400000, guid: 7040f15023be6b749b6a72a7e570de6f, type: 2}
 --- !u!114 &628553257156464887
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -149,7 +149,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14b266ca9ef6c584f9e77544d30baada, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scriptableDifficulties: {fileID: 11400000, guid: 842c33126587c71419607b016d30e1da, type: 2}
+  scriptableDifficulties: {fileID: 11400000, guid: 7040f15023be6b749b6a72a7e570de6f, type: 2}
   difficultyText: {fileID: 7497277688344780076}
 --- !u!1 &7497277688344780074
 GameObject:

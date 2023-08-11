@@ -16,7 +16,11 @@ namespace Items
         {
             _clicksPerformed++;
             if (_clicksPerformed >= ClicksNeeded)
+            {
+                GameManager.Instance.ChangeScore(ItemAddScore);
                 Debug.Log("Shield Item Clicked.");
+                gameObject.SetActive(false);
+            }
         }
     }
 }

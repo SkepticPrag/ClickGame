@@ -31,6 +31,7 @@ public abstract class Item : MonoBehaviour, IItem
     {
         yield return new WaitForSeconds(ItemLifeSpan);
         Debug.Log("Point loss: " + ItemPointLoss);
+        GameManager.Instance.ChangeScore(ItemPointLoss);
         gameObject.SetActive(false);
     }
 
