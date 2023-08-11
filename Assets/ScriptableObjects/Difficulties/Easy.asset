@@ -12,12 +12,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b1da344bb8fb9e44aaa927939a6fa95, type: 3}
   m_Name: Easy
   m_EditorClassIdentifier: 
+  difficulty: Easy
   itemChances:
   - tag: Coin
     scriptableItem: {fileID: 11400000, guid: 27b2948b757f0b645ab14781e45c485d, type: 2}
-    spawnChance: 5
+    spawnChance: 15
+  - tag: Coin
+    scriptableItem: {fileID: 11400000, guid: 27b2948b757f0b645ab14781e45c485d, type: 2}
+    spawnChance: 85
+  - tag: Coin
+    scriptableItem: {fileID: 11400000, guid: 27b2948b757f0b645ab14781e45c485d, type: 2}
+    spawnChance: 0
+  - tag: Coin
+    scriptableItem: {fileID: 11400000, guid: 27b2948b757f0b645ab14781e45c485d, type: 2}
+    spawnChance: 0
+  - tag: Coin
+    scriptableItem: {fileID: 11400000, guid: 27b2948b757f0b645ab14781e45c485d, type: 2}
+    spawnChance: 0
+  - tag: Coin
+    scriptableItem: {fileID: 11400000, guid: 27b2948b757f0b645ab14781e45c485d, type: 2}
+    spawnChance: 0
   minimumTimeBetweenSpawns: 0
   maximumTimeBetweenSpawns: 0
   minimumObjectsAtTheSameTime: 0
   maximumObjectsAtTheSameTime: 0
-  totalChanceOfAllItems: 5
+  totalChanceOfAllItems: 100

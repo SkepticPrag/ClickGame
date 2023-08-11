@@ -4,6 +4,8 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "New Difficulty")]
 public class ScriptableDifficulties : ScriptableObject
 {
+    public string difficulty;
+    
     [System.Serializable]
     public class ItemChance
     {

@@ -52,6 +52,7 @@ public class ObjectPooler : MonoBehaviour
                 }
 
                 objectPool.Enqueue(obj);
+                // objectItem?.OnItemSpawn(true, new Vector3(0, 0, 0), Quaternion.identity);
                 obj.SetActive(false);
             }
 

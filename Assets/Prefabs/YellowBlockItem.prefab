@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2641808533156206355}
-  - component: {fileID: 418534324270786945}
+  - component: {fileID: 5726900899047336002}
   m_Layer: 0
   m_Name: YellowBlockItem
   m_TagString: Untagged
@@ -33,7 +33,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &418534324270786945
+--- !u!114 &5726900899047336002
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -42,7 +42,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 847872996103049167}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9e3b797be5d8a944aa56ee8b50f5d87c, type: 3}
+  m_Script: {fileID: 11500000, guid: 2e39333c4e4e24a42b73df2c50aef8d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &3250548439019712691

@@ -17,4 +17,4 @@ MonoBehaviour:
   lifeSpan: 5
   clicksNeeded: 5
   clickedScore: 10
-  pointLoss: 5
+  pointLoss: -5

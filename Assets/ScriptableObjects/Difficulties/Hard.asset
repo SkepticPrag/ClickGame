@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b1da344bb8fb9e44aaa927939a6fa95, type: 3}
   m_Name: Hard
   m_EditorClassIdentifier: 
+  difficulty: Hard
   itemChances: []
   minimumTimeBetweenSpawns: 0
   maximumTimeBetweenSpawns: 0

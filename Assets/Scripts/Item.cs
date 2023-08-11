@@ -3,7 +3,7 @@ using Interfaces;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class Item : MonoBehaviour, IItem
+public abstract class Item : MonoBehaviour, IItem
 {
     public int ClicksNeeded { get; set; }
     public int ItemAddScore { get; set; }
@@ -34,8 +34,5 @@ public class Item : MonoBehaviour, IItem
         gameObject.SetActive(false);
     }
 
-    public void OnPointerClick(PointerEventData eventData)
-    {
-        Debug.Log("Added Score: " + ItemAddScore);
-    }
+    public abstract void OnPointerClick(PointerEventData eventData);
 }

@@ -9,9 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8999262173360434844}
-  - component: {fileID: 7033161247223932789}
+  - component: {fileID: 4109713969031692056}
   m_Layer: 0
-  m_Name: ShiledItem
+  m_Name: ShieldItem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -33,7 +33,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7033161247223932789
+--- !u!114 &4109713969031692056
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -42,7 +42,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1218590271264594339}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9e3b797be5d8a944aa56ee8b50f5d87c, type: 3}
+  m_Script: {fileID: 11500000, guid: c71cb7da086dd314aac188bc881b64cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &8172724979287219193
